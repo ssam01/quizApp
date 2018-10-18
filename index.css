@@ -12,7 +12,7 @@ header ul li {
     font-size: 30px;
     text-transform: uppercase;
     display: inline;
-    
+    font-weight: bold;
     
 }
 header ul {
@@ -55,7 +55,7 @@ input[type=radio]:checked{
 }
  
 
-form fieldset label
+form  label
 {
     display: block;
     font-size: larger;
@@ -64,6 +64,12 @@ form fieldset label
 label
 {  
     text-align: left;
+}
+
+form ul{
+    border-style: solid;
+    list-style: none;
+    padding-left: 10px;
 }
 
 @media only screen and (min-width: 320px) {

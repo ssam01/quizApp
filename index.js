@@ -150,29 +150,41 @@ function generateHTMLForQuestion()
    
    return`<h2>${ques}</h2>
    <form>
-     <fieldset role="radiogroup">
+   <div role="radiogroup" id="question_item">
+   <ul  aria-labelledby="question_item">
+     
+       <li>      
        <label>
-         <input class="answer" type="radio"  role="radio" value='${choice1}' name="option" checked></input>
+         <input class="answer" type="radio"  value='${choice1}' name="option" checked aria-checked="true" aria-labelledby="question_item"> </input>
          <span>${choice1}</span>
        </label>
+       </li>
  
+       <li>
        <label>
-         <input class="answer" type="radio" role="radio" value='${choice2}' name="option"></input>
+         <input class="answer" type="radio" value='${choice2}' name="option" aria-checked="false" aria-labelledby="question_item"></input>
          <span>${choice2}</span>
        </label>
+       </li>
  
+       <li>
        <label>
-         <input class="answer" type="radio" role="radio" value='${choice3}' name="option"></input>
+         <input class="answer" type="radio" value='${choice3}' name="option" aria-checked="false" aria-labelledby="question_item"></input>
          <span>${choice3}</span>
        </label>
+       </li>
  
+       <li>
        <label>
-         <input class="answer" type="radio" role="radio" value='${choice4}' name="option"></input>
+         <input class="answer" type="radio" value='${choice4}' name="option" aria-checked="false" aria-labelledby="question_item"></input>
          <span>${choice4}</span>
        </label>
-     </fieldset>  
-     <button  type="submit"  role="button" class="submitButton">Submit</button>
+       </li>
 
+     </ul>  
+     </div>
+     <button  type="submit"  class="submitButton">Submit</button>
+    
    </form>`;
    
 }
