@@ -6,13 +6,13 @@ html {
   }
 
 header ul li {
-    padding: 20px;
+    padding: 17px;
     list-style: none;
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
     display: inline;
-    
+    font-weight: 600;
     
 }
 header ul {
@@ -27,7 +27,7 @@ header ul {
     margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 25px; 
+    font-size: 25px;
     
 }
 

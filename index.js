@@ -73,7 +73,7 @@ function generateHTMLForIncorrectAnswer()
     let quesNumIndex = QUESTION_NUMBER -1;
     let answer = QUESTIONS[quesNumIndex].correctAnswer;
     
-    return `<h2>That is incorrect. <br/>The correct answer is: ${answer}.</h2>
+    return `<h1>That is incorrect. <br/>The correct answer is: ${answer}.</h1>
     
     <button class="nextButton" role="button">Next</button>`; 
 }
@@ -81,7 +81,7 @@ function generateHTMLForIncorrectAnswer()
 
 function generateHTMLForCorrectAnswer()
 {    
-    return `<h2>That's correct!</h2>
+    return `<h1>That's correct!</h1>
     
       <button class="nextButton" role="button">Next</button>`;
 }
@@ -115,7 +115,7 @@ function displayAnswerFeedback(result)
 function generateHTMLForFinalScore()
 {
     
-    return `<h2>You got ${SCORE}/${QUESTIONS.length} correct.</h2>
+    return `<h1>You got ${SCORE}/${QUESTIONS.length} correct.</h1>
     
       <button class="restartButton" role="button">Restart quiz.</button>`;   
   
@@ -148,7 +148,7 @@ function generateHTMLForQuestion()
     let choice4 = QUESTIONS[quesNumIndex].choices[3];
     
    
-   return`<h2>${ques}</h2>
+   return`<h1>${ques}</h1>
    <form>
      <fieldset role="radiogroup">
        <label>
