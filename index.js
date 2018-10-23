@@ -73,17 +73,17 @@ function generateHTMLForIncorrectAnswer()
     let quesNumIndex = QUESTION_NUMBER -1;
     let answer = QUESTIONS[quesNumIndex].correctAnswer;
     
-    return `<h2>That is incorrect. <br/>The correct answer is: ${answer}.</h2>
+    return `<h1>That is incorrect. <br/>The correct answer is: ${answer}.</h1>
     
-    <button class="nextButton" role="button">Next</button>`; 
+    <button class="nextButton">Next</button>`; 
 }
 
 
 function generateHTMLForCorrectAnswer()
 {    
-    return `<h2>That's correct!</h2>
+    return `<h1>That's correct!</h1>
     
-      <button class="nextButton" role="button">Next</button>`;
+      <button class="nextButton">Next</button>`;
 }
 
 function incrementScore()
@@ -115,9 +115,9 @@ function displayAnswerFeedback(result)
 function generateHTMLForFinalScore()
 {
     
-    return `<h2>You got ${SCORE}/${QUESTIONS.length} correct.</h2>
+    return `<h1>You got ${SCORE}/${QUESTIONS.length} correct.</h1>
     
-      <button class="restartButton" role="button">Restart quiz.</button>`;   
+      <button class="restartButton">Restart quiz.</button>`;   
   
 }
 
@@ -148,32 +148,35 @@ function generateHTMLForQuestion()
     let choice4 = QUESTIONS[quesNumIndex].choices[3];
     
    
-   return`<h2>${ques}</h2>
-   <form>
-     <fieldset role="radiogroup">
-       <label>
-         <input class="answer" type="radio"  role="radio" value='${choice1}' name="option" checked></input>
-         <span>${choice1}</span>
-       </label>
+    return`
+    <form>
+      <fieldset>
+        <legend><h1>${ques}</h1></legend>
+        <div>
+        <label>
+          <input class="answer" type="radio"  value='${choice1}' name="option" checked></input>
+          <span>${choice1}</span>
+        </label>
+  
+        <label>
+          <input class="answer" type="radio" value='${choice2}' name="option"></input>
+          <span>${choice2}</span>
+        </label>
+  
+        <label>
+          <input class="answer" type="radio" value='${choice3}' name="option"></input>
+          <span>${choice3}</span>
+        </label>
+  
+        <label>
+          <input class="answer" type="radio" value='${choice4}' name="option"></input>
+          <span>${choice4}</span>
+        </label>
+        </div>
+      </fieldset>  
+      <button  type="submit"  class="submitButton">Submit</button>
  
-       <label>
-         <input class="answer" type="radio" role="radio" value='${choice2}' name="option"></input>
-         <span>${choice2}</span>
-       </label>
- 
-       <label>
-         <input class="answer" type="radio" role="radio" value='${choice3}' name="option"></input>
-         <span>${choice3}</span>
-       </label>
- 
-       <label>
-         <input class="answer" type="radio" role="radio" value='${choice4}' name="option"></input>
-         <span>${choice4}</span>
-       </label>
-     </fieldset>  
-     <button  type="submit"  role="button" class="submitButton">Submit</button>
-
-   </form>`;
+    </form>`;
    
 }
 
