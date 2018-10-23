@@ -66,7 +66,7 @@ input[type=radio]:checked{
 }
  
 
-form fieldset label
+form  label
 {
     display: block;
     font-size: larger;
